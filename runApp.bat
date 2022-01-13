@@ -1,0 +1,2 @@
+cd webthermo
+npm start 
