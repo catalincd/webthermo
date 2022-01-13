@@ -1,3 +1,3 @@
 #!/bin/bash
-cd webthermo
+cd webthermo-app
 npm start 

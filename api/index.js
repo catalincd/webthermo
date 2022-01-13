@@ -12,13 +12,13 @@ const addUser = (
     password
 ) => {
     users.push({
-        code: btoa(password),
+        code: Buffer.from(password).toString('base64'),
         user: username,
         pass: password,
         thermos: []
     });
     fs.writeFile("./users.json", JSON.stringify(users), () => {});
-    return btoa(password);
+    return Buffer.from(password).toString('base64');
 }
 
 const getUser = (username) => {
@@ -35,7 +35,7 @@ const userExists = (username) => {
 
 app.use(express.json())
 
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', '*');
     res.setHeader('Access-Control-Allow-Headers', '*');

@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'DigitalFont';
+    src: local('DigitalFont'), url(./fonts/digital-7-italic.ttf) format('truetype');
+    /* other formats include: 'woff2'; 'truetype; 'opentype';
+                            'embedded-opentype'; and 'svg' */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --dark-blue: #1C5D99;
+    --light-grey: #BBCDE5;
+    --eerie-black: #222222;
+    --bright-orange: #F0544F;
+    --opal: #C6D8D3;
+    --space-cadet: #2D3142;
+    --mandarin: #EF8354;
+    --blue-bars: #004FFF;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--light-grey);
+    margin: 0;
+}
+
+#root {
+    margin: 0;
+}
+
+.thermoContainer {
+    border-radius: 8px;
+    background-color: #3085d6;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.75rem;
+    margin: 0.75rem
+}
+
+.topThermoText {
+    width: 60%;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.topThermoText:focus {
+    background: #1a5790;
+}
+
+.thermoText {
+    font-family: 'DigitalFont';
+    font-size: 7rem;
+    color: #fff;
+    margin: 3rem;
+}
+
+.ToolsButtons {
+    justify-self: end;
+}
+
+.toolsButton {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.editButton:hover {
+    color: lime;
+}
+
+.deleteButton:hover {
+    color: red;
+}
+
+.topThermo {
+    width: calc(100% - 1rem);
+    padding: 0.75rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tempThermo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.buttonsThermo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.createThermoButton {
+    color: #fff;
+    width: 18.5rem;
+    height: 3rem;
+    background: #64d979;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    transition: color 0.05s ease;
+}
+
+.thermoButton {
+    color: white;
+    line-height: 0.7;
+    font-size: 2.5rem;
+    width: 9rem;
+    height: 3rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: filter 0.4s ease;
+    transition: color 0.05s ease;
+}
+
+.incButton {
+    background: var(--bright-orange);
+}
+
+.decButton {
+    background: var(--dark-blue);
+}
+
+.createThermoButton:hover,
+.incButton:hover,
+.decButton:hover {
+    filter: brightness(130%) saturate(80%);
+}
+
+.createThermoButton:active,
+.thermoButton:active {
+    color: black;
+}
+
+.allThemosContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.deleteButton {}
+
+.bar {
+    background-color: var(--blue-bars);
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.topBar {
+    justify-content: space-between;
+}
+
+.bottomBar {
+    justify-content: center;
+}
+
+.userH3 {
+    font-size: 1.25rem;
+}
+
+.userContainer {
+    display: flex;
+}
+
+.logoutButton {
+    color: white;
+    background-color: #3085d6;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border: none;
+    padding: 0rem 2rem;
+    margin-left: 2rem;
+    border-radius: 8px;
+}
+
+.logoutButton:hover {
+    filter: brightness(130%) saturate(80%);
+}
+
+.welcomeText {
+    color: black;
+    font-size: 6rem;
+}
+
+.tempImg {}
+
+.welcomeText {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.boldText {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.homeContainer {
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeTop {
+    display: flex;
+    align-items: center;
+}
+
+.homeButton {
+    color: white;
+    background-color: #3085d6;
+    cursor: pointer;
+    font-size: 1.75rem;
+    border: none;
+    padding: 1rem 0rem;
+    margin-left: 2rem;
+    border-radius: 8px;
+    width: 13rem;
+}
+
+.homeButton:hover {
+    filter: brightness(130%) saturate(80%);
+}
+
+.formContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitBtn {
+    margin: 1rem 0 0 0;
+    padding: 7px 10px;
+    border: 1px solid #efffff;
+    border-radius: 8px;
+    background: #3085d6;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    display: block;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    filter: brightness(130%) saturate(80%);
+}
