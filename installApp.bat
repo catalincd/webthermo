@@ -1,2 +1,2 @@
 cd webthermo-app
-npm start 
+npm install
